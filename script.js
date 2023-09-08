@@ -25,7 +25,7 @@ function formatDateToCustomString(date) {
   
     const dayWithOrdinalSuffix = getDayWithOrdinalSuffix(dayOfMonth);
   
-    return `${dayOfWeek} ${dayWithOrdinalSuffix} of ${month} ${year}`;
+    return `${dayOfWeek}`;
   }
   
 const date = new Date(); // desired date
