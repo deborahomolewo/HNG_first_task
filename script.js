@@ -32,13 +32,11 @@ const date = new Date(); // desired date
 const formattedDate = formatDateToCustomString(date);
 document.getElementById("day").innerHTML = `Today is ${formattedDate}`;
 
-
 const clock = () => {
     const date = new Date();
     const timeEl = document.getElementById('time');
-    let time = date.toLocaleTimeString('en-GB', {hour: '2-digit', minute: '2-digit', second: '2-digit'})
+    let time = date.toLocaleTimeString( { fractionalSecondDigits: 4 })
     timeEl.textContent = `The time is ${time}`;
 }
-
 clock()
 setInterval(clock, 1000)
